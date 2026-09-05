@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Manager Webapp</title>
+</head>
+
+<body>
+    <h1>Book Manager Webapp</h1>
+    <p>
+        <a href="/">Home</a> |
+        <a href="/view-all">View all books</a> |
+        <a href="/add-new">Add a book</a>
+    </p>
+
+    <hr>
+
+    <h3>Add a new book information</h3>
+
+    <form action="/add-new-book" method="POST">
+
+        <!-- table>tr*4>td*2 -->
+         <table>
+            <tr>
+                <td><label for="title">Title: </label></td>
+                <td><input autofocus type="text" id="title" name="title"></td>
+            </tr>
+            <tr>
+                <td><label for="author">Author: </label></td>
+                <td><input type="text" id="author" name="author"></td>
+            </tr>
+            <tr>
+                <td><label for="price">Price: </label></td>
+                <td><input type="number" id="price" name="price"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button>Save</button>
+                </td>
+            </tr>
+         </table>
+
+
+    </form>
+
+</body>
+
+</html>

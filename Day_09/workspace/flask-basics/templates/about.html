@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <style>
+        .green_item {
+            color: green
+        }
+
+        .blue_item {
+            color: blue
+        }
+    </style>
+</head>
+
+<body>
+    <h1>About the author</h1>
+    <p><strong>Name</strong><span>: {{author_name}}</span></p>
+    <p><strong>Email addresses</strong>
+    <ul>
+        {% for email in author_emails %}
+        {% if email['official'] %}
+        <li class="blue_item">{{email['value']}}</li>
+        {% else %}
+        <li class="green_item">{{email['value']}}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    </p>
+</body>
+
+</html>
